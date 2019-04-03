@@ -15,13 +15,16 @@ class TwitterHandler:
 
         self.twitter_api = tweepy.API(auth)
 
-        self.url_pattern = re.compile(r'https?://t.co/\w+')
+        self.url_pattern = re.compile(r'https?://t.co/\w+', re.RegexFlag.MULTILINE | re.RegexFlag.UNICODE)
+        self.rt_pattern = re.compile(r'^RT', re.RegexFlag.MULTILINE | re.RegexFlag.UNICODE)
         self.twitter_config = twitter_config
 
     def fetch(self, twitter_user, output_dir):
         user = self.twitter_api.get_user(screen_name=twitter_user['screen_name'])
         tweets = self._get_all_tweets(user.id, user.status.id)
-        tweets_text = [self._clean_tweet(t.text) for t in tweets]
+        print(twitter_user['screen_name'] + ': ' + str(len(tweets)))
+        tweets_text = [self._clean_tweet(tweet.text) for tweet in tweets if self._is_valid(tweet)]
+        print(twitter_user['screen_name'] + ' filtered: ' + str(len(tweets_text)))
         with open(path.join(output_dir, twitter_user['screen_name']), 'w', encoding='utf8') as f:
             f.write('\n'.join(tweets_text))
         return tweets_text
@@ -43,6 +46,8 @@ class TwitterHandler:
             for i in range(self.twitter_config['max_pages']):
                 timeline = self.twitter_api.user_timeline(user_id=user_id, max_id=max_id, count=200)
                 tweets = tweets + timeline
+                if not timeline:
+                    break
                 max_id = min(timeline, key=lambda t: t.id).id - 1
         except Exception as e:
             print(e)
@@ -50,4 +55,7 @@ class TwitterHandler:
             return tweets
 
     def _clean_tweet(self, text):
-        return self.url_pattern.sub('', text).replace('...', '')
+        return self.url_pattern.sub('', text).replace('...', '').replace('…', '')
+
+    def _is_valid(self, tweet):
+        return tweet.in_reply_to_screen_name is None and self.rt_pattern.match(tweet.text) is None

@@ -16,4 +16,4 @@ for filename in listdir(original_tweets_dir):
             tweet = TweetMaker.make_tweet(tweets)
             if not tweet:
                 continue
-            print(filename + ': ' + tweet)
+            print(filename + ': ' + tweet)  # TODO: post tweet
