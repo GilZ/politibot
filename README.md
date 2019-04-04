@@ -5,7 +5,7 @@ You can see the bot in action here: https://twitter.com/Politibot14
 
 Politibot takes recent politicians' tweets, creates a Markov chain from them, and tries to create a tweet that sounds like something they'd tweet.
 
-##Usage
+## Usage
 1. Clone the repository, create a conda environment based on `environment.yml` and activate it
 2. Create a config file: `twitter_config.json` in the config directory based on the following template (consult Twitter API docs for more details):
 ```json
