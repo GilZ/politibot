@@ -20,11 +20,6 @@
   },
 
   {
-    "name": "Ronit Habibistit",
-    "screen_name": "@ronitlev12"
-  },
-
-  {
     "name": "Benny Gantz",
     "screen_name": "@gantzbe"
   },
@@ -52,6 +47,31 @@
   {
     "name": "Bezalel Smotrich",
     "screen_name": "@bezalelsm"
+  },
+
+  {
+    "name": "Shuli Mualem",
+    "screen_name": "@Shuli_MR"
+  },
+
+  {
+    "name": "Oren Hazan",
+    "screen_name": "@oren_haz"
+  },
+
+  {
+    "name": "Avigdor Liberman",
+    "screen_name": "@AvigdorLiberman"
+  },
+
+  {
+    "name": "Dudi Amsalem",
+    "screen_name": "@dudiamsalem"
+  },
+
+  {
+    "name": "Avi Gabbay",
+    "screen_name": "@GabbayAvi"
   }
 
 ]
