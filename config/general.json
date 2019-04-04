@@ -1,4 +1,5 @@
 {
   "original_tweets_dir": "/tmp/original_tweets",
-  "new_tweets_file": "/tmp/tweets.txt"
+  "new_tweets_file": "/tmp/tweets.txt",
+  "bot_screen_name": "@Politibot14"
 }
