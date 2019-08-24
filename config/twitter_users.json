@@ -30,16 +30,6 @@
   },
 
   {
-    "name": "Moshe Feiglin",
-    "screen_name": "@moshefeiglin"
-  },
-
-  {
-    "name": "Shelly Yacimovich",
-    "screen_name": "@Syechimovich"
-  },
-
-  {
     "name": "Stav Shaffir",
     "screen_name": "@StavShaffir"
   },
@@ -47,16 +37,6 @@
   {
     "name": "Bezalel Smotrich",
     "screen_name": "@bezalelsm"
-  },
-
-  {
-    "name": "Shuli Mualem",
-    "screen_name": "@Shuli_MR"
-  },
-
-  {
-    "name": "Oren Hazan",
-    "screen_name": "@oren_haz"
   },
 
   {
@@ -72,6 +52,31 @@
   {
     "name": "Avi Gabbay",
     "screen_name": "@GabbayAvi"
+  },
+
+  {
+    "name": "Rafi Perets",
+    "screen_name": "@realrafiperets"
+  },
+
+  {
+    "name": "Amir Perets",
+    "screen_name": "@amirperetz"
+  },
+
+  {
+    "name": "Ayman Odeh",
+    "screen_name": "@AyOdeh"
+  },
+
+  {
+    "name": "Ehud Barak",
+    "screen_name": "@barak_ehud"
+  },
+
+  {
+    "name": "Benjamin Netanyahu",
+    "screen_name": "@netanyahu"
   }
 
 ]
