@@ -28,7 +28,7 @@ def run():
                 new_tweets, model = tweet_maker.make_tweets_from_text(original_tweets, 10)
                 combined_model = tweet_maker.combine(combined_model, model)
                 output_tweets(new_tweets, filename, output, args.post)
-        new_combined_tweets = tweet_maker.make_tweets_from_model(combined_model, 10)
+        new_combined_tweets = tweet_maker.make_tweets_from_model(combined_model, 20)
         output_tweets(new_combined_tweets, config['bot_screen_name'], output, args.post)
 
 
