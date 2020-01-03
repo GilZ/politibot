@@ -1,72 +1,17 @@
-[
-  {
-    "name": "Miri Regev",
-    "screen_name": "@regev_miri"
-  },
-
-  {
-    "name": "Ayelet Shaked",
-    "screen_name": "@Ayelet__Shaked"
-  },
-
-  {
-    "name": "Naftali Bennett",
-    "screen_name": "@naftalibennett"
-  },
-
-  {
-    "name": "Benny Gantz",
-    "screen_name": "@gantzbe"
-  },
-
-  {
-    "name": "Yair Lapid",
-    "screen_name": "@yairlapid"
-  },
-
-  {
-    "name": "Stav Shaffir",
-    "screen_name": "@StavShaffir"
-  },
-
-  {
-    "name": "Bezalel Smotrich",
-    "screen_name": "@bezalelsm"
-  },
-
-  {
-    "name": "Avigdor Liberman",
-    "screen_name": "@AvigdorLiberman"
-  },
-
-  {
-    "name": "Nitzan Horowitz",
-    "screen_name": "@NitzanHorowitz"
-  },
-
-  {
-    "name": "Rafi Perets",
-    "screen_name": "@realrafiperets"
-  },
-
-  {
-    "name": "Amir Perets",
-    "screen_name": "@amirperetz"
-  },
-
-  {
-    "name": "Ayman Odeh",
-    "screen_name": "@AyOdeh"
-  },
-
-  {
-    "name": "Ehud Barak",
-    "screen_name": "@barak_ehud"
-  },
-
-  {
-    "name": "Benjamin Netanyahu",
-    "screen_name": "@netanyahu"
-  }
-
-]
+{
+  "@regev_miri": "מירי רגב",
+  "@Ayelet__Shaked": "איילת שקד",
+  "@naftalibennett": "נפתלי בנט",
+  "@gantzbe": "בני גנץ",
+  "@yairlapid": "יאיר לפיד",
+  "@StavShaffir": "סתיו שפיר",
+  "@bezalelsm": "בצלאל סמוטריץ'",
+  "@AvigdorLiberman": "אביגדור ליברמן",
+  "@NitzanHorowitz": "ניצן הורוביץ",
+  "@realrafiperets": "רפי פרץ",
+  "@amirperetz": "עמיר פרץ",
+  "@AyOdeh": "איימן עודה",
+  "@barak_ehud": "אהוד ברק",
+  "@netanyahu": "בנימין נתניהו",
+  "@gidonsaar": "גדעון סער"
+}

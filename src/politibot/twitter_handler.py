@@ -17,8 +17,7 @@ class TwitterHandler:
         self.rt_pattern = re.compile(r'^RT', re.RegexFlag.MULTILINE | re.RegexFlag.UNICODE)
         self.twitter_config = twitter_config
 
-    def fetch(self, twitter_user, output_dir):
-        screen_name = twitter_user['screen_name']
+    def fetch(self, screen_name, output_dir):
         user = self.twitter_api.get_user(screen_name=screen_name)
         tweets = self._get_all_tweets(user.id, user.status.id)
         print('{} total tweets: {}'.format(screen_name, len(tweets)))

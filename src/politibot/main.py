@@ -20,6 +20,7 @@ def run():
         tweeter_handler = TwitterHandler()
         tweeter_handler.fetch_all(original_tweets_dir)
 
+    twitter_users = config_manager.get_config('twitter_users')
     combined_model = None
     with open(new_tweets_file, 'w', encoding='utf8') as output:
         for filename in listdir(original_tweets_dir):
@@ -27,19 +28,18 @@ def run():
                 original_tweets = f.read()
                 new_tweets, model = tweet_maker.make_tweets_from_text(original_tweets, 10)
                 combined_model = tweet_maker.combine(combined_model, model)
-                output_tweets(new_tweets, filename, output, args.post)
+                output_tweets(new_tweets, filename, twitter_users[filename], output)
         new_combined_tweets = tweet_maker.make_tweets_from_model(combined_model, 20)
-        output_tweets(new_combined_tweets, config['bot_screen_name'], output, args.post)
+        output_tweets(new_combined_tweets, config['bot_screen_name'], config['bot_name'], output)
 
 
-def output_tweets(tweets, twitter_handle, output, should_post):
+def output_tweets(tweets, handle, name, output):
     for new_tweet in tweets:
         if not new_tweet:
             continue
 
-        final_new_tweet = new_tweet + " – " + twitter_handle
-        if should_post:
-            pass  # TODO
+        final_new_tweet = '{name} ({handle}): {tweet}'.format(name=name, handle=handle, tweet=new_tweet)
+
         output.write(final_new_tweet + '\n')
     output.write('\n')
 
